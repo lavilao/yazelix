@@ -3,6 +3,10 @@ keybinds clear-defaults=true{
     normal {
         // uncomment this and adjust key if using copy_on_select=false
         // bind "Alt c" { Copy; }
+        bind "Ctrl w" {SwitchToMode "Pane";}
+        // bind "Ctrl r" {SwitchToMode "Resize";}
+        // Hasta encontrar combinación mejor
+        bind "Alt g" {Run "gitui"{floating true;}; SwitchToMode "normal";}
     }
     locked {
         bind "Ctrl g" { SwitchToMode "Normal"; }
@@ -30,7 +34,7 @@ keybinds clear-defaults=true{
         bind "n" { NewPane; SwitchToMode "Normal"; }
         bind "d" { NewPane "Down"; SwitchToMode "Normal"; }
         bind "r" { NewPane "Right"; SwitchToMode "Normal"; }
-        bind "x" { CloseFocus; SwitchToMode "Normal"; }
+        bind "q" { CloseFocus; SwitchToMode "Normal"; }
         bind "f" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
         bind "z" { TogglePaneFrames; SwitchToMode "Normal"; }
         bind "w" { ToggleFloatingPanes; SwitchToMode "Normal"; }
@@ -284,7 +288,7 @@ load_plugins {
 // Choose the path to the default shell that zellij will use for opening new panes
 // Default: $SHELL
 //
-// default_shell "fish"
+default_shell "nu"
 
 // Choose the path to override cwd that zellij will use for opening new panes
 //
